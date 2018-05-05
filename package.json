@@ -1,5 +1,5 @@
 {
-  "name": "phone-book-vri",
+  "name": "vri-phonebook",
   "engines": {
     "node": "8.7.0"
   },
