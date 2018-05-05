@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
 import setAxiosHeaders from '../util/SessionHeaderUtil';
+import styled from 'styled-components';
 
 class SignIn extends Component {
   state = {
@@ -26,37 +27,69 @@ class SignIn extends Component {
       return <Redirect to="/allcontacts" />;
     }
     return (
-      <div>
-        <form onSubmit={this.signIn}>
-          <div>
-            <label htmlFor="email">E-mail: </label>
-            <input
-              onChange={this.handleChange}
-              type="text"
-              name="email"
-              value={this.state.email}
-            />
-          </div>
-          <div>
-            <label htmlFor="password">Password: </label>
-            <input
-              onChange={this.handleChange}
-              type="password"
-              name="password"
-              value={this.state.password}
-            />
-          </div>
-          <button>Sign In</button>
-          <div>
-            <h3>Create An Account</h3>
-            <Link to="/signUp">
-              <button>Sign Up</button>
-            </Link>
-          </div>
-        </form>
-      </div>
+      <BackgroundStyle>
+        <BoxView>
+          <h2>Sign In to Phonebook</h2>
+          <form onSubmit={this.signIn}>
+            <div>
+              <input
+                onChange={this.handleChange}
+                type="text"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+            <div>
+              <input
+                onChange={this.handleChange}
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
+            </div>
+            <ButtonStyle>Sign In</ButtonStyle>
+            <div>
+              <h3>Create An Account</h3>
+              <Link to="/signup">Don't have an account?</Link>
+            </div>
+          </form>
+        </BoxView>
+      </BackgroundStyle>
     );
   }
 }
 
 export default SignIn;
+
+const BackgroundStyle = styled.div`
+  align-items: center;
+  background: #dddddd;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+`;
+
+const BoxView = styled.div`
+  background-color: white;
+  padding: 2.4rem;
+  text-align: center;
+  width: 24rem;
+`;
+
+const ButtonStyle = styled.button`
+  background-color: #800000;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.2;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+`;
+
+const FormView = styled.form`
+  display: flex;
+  flex-direction: column;
+`;

@@ -31,6 +31,7 @@ class NavBar extends Component {
       await axios.delete('/auth/sign_out');
       clearAuthTokens();
       this.setState({ signedIn: false });
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }
@@ -45,9 +46,7 @@ class NavBar extends Component {
           </Link>
           <div>
             <EmailName> Signed In As: {this.state.user.email} </EmailName>
-            <a href to="/" onClick={this.signOut}>
-              Sign Out
-            </a>
+            <button onClick={this.signOut}>Sign Out</button>
           </div>
         </Header>
       );
