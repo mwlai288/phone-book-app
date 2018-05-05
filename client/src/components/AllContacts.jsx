@@ -40,7 +40,7 @@ class AllContacts extends Component {
         <div>
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Search by First Name"
             value={this.state.search}
             onChange={this.updateSearch}
           />

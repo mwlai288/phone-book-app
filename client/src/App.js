@@ -66,7 +66,6 @@ class App extends Component {
       };
       const response = await axios.post('/auth/sign_in', payload);
       saveAuthTokens(response.headers);
-
       this.setState({
         signedIn: true
       });

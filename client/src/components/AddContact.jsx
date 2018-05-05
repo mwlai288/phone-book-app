@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
+import styled from 'styled-components';
 import axios from 'axios';
 
 class AddContact extends Component {
@@ -41,7 +42,11 @@ class AddContact extends Component {
         <div>
           <form onSubmit={this.addInfo}>
             <FormGroup controlId="formInlineName">
-              <ControlLabel>First Name:</ControlLabel>
+              <ControlLabel>
+                <WarningBox>
+                  First Name: <Warning>(Must be filled in)</Warning>
+                </WarningBox>
+              </ControlLabel>
               <FormControl
                 type="text"
                 name="firstname"
@@ -105,3 +110,13 @@ class AddContact extends Component {
   }
 }
 export default AddContact;
+
+const Warning = styled.p`
+  color: red;
+  display: flex;
+`;
+
+const WarningBox = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
