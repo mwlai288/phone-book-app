@@ -3,8 +3,8 @@ class ContactsController < ApplicationController
   # before_action :authenticate_user!
 
   def index
-    @contacts = Contact.all.order('firstname ASC')
-
+    # @contacts = Contact.all.order('firstname ASC')
+    @contacts = current_user.contacts.order('firstname ASC')
     render json: @contacts
   end
 
