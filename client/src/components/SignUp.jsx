@@ -57,6 +57,7 @@ class SignUp extends Component {
                 placeholder="Password"
               />
             </div>
+            <Subscript>Must be 8 or more characters</Subscript>
             <div>
               <input
                 onChange={this._handleChange}
@@ -108,4 +109,8 @@ const ButtonStyle = styled.button`
 export const FormView = styled.form`
   display: flex;
   flex-direction: column;
+`;
+
+const Subscript = styled.sub`
+  color: red;
 `;
