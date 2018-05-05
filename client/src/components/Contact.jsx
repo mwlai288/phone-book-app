@@ -64,7 +64,6 @@ class Contact extends Component {
             </BoxedView>
           </ContactInfo>
         </ContactBox>
-        );
       </div>
     );
   }
@@ -81,7 +80,7 @@ const BoxedView = styled.div`
   background-color: white;
   padding: 2.4rem;
   text-align: center;
-  width: 24rem;
+  width: 35rem;
 `;
 
 const ContactBox = styled.div`
@@ -98,6 +97,7 @@ const ContactInfo = styled.div`
   flex-direction: column;
   font-family: 'Goudy Bookletter 1911', serif;
   font-size: 24px;
+  justify-content: flex-start;
 `;
 
 const Name = styled.h1`
