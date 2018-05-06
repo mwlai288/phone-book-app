@@ -17,7 +17,6 @@ class AddContact extends Component {
 
   addInfo = async (e) => {
     e.preventDefault();
-    const id = this.props.match.params.id;
     const payload = this.state.contacts;
     console.log(payload);
     try {

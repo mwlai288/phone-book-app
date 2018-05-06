@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import axios from 'axios';
 import setAxiosHeaders from '../util/SessionHeaderUtil';
 import styled from 'styled-components';
 

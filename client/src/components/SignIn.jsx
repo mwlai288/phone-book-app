@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
-import axios from 'axios';
 import setAxiosHeaders from '../util/SessionHeaderUtil';
 import styled from 'styled-components';
 
@@ -87,9 +86,4 @@ const ButtonStyle = styled.button`
   padding: 1rem;
   margin-top: 0.5rem;
   text-transform: uppercase;
-`;
-
-const FormView = styled.form`
-  display: flex;
-  flex-direction: column;
 `;

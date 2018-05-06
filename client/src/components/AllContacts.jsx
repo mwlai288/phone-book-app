@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { ListGroup, ListGroupItem } from 'react-bootstrap';
+import {
+  ListGroup,
+  ListGroupItem
+  // MenuItem,
+  // SplitButton
+} from 'react-bootstrap';
 import axios from 'axios';
 import styled from 'styled-components';
 
@@ -34,6 +39,11 @@ class AllContacts extends Component {
           .indexOf(this.state.search.toLowerCase()) !== -1
       );
     });
+
+    // let sortedGroups = this.state.contacts.filter((contact) => {
+    //   return contact.group;
+    // });
+
     return (
       <div>
         <Title>Phone Book</Title>
@@ -46,10 +56,22 @@ class AllContacts extends Component {
           />
         </div>
 
+        {/* Component To make dropdown menu to sort */}
+        {/* <SplitButton
+          title="Dropdown right"
+          pullRight
+          id="split-button-pull-right"
+        >
+          <MenuItem eventKey="1">Action</MenuItem>
+          <MenuItem eventKey="2">Another action</MenuItem>
+          <MenuItem eventKey="3">Something else here</MenuItem>
+          <MenuItem divider />
+          <MenuItem eventKey="4">Separated link</MenuItem>
+        </SplitButton> */}
+
         <h1>
           <Link to="/newcontact">New Contact</Link>
         </h1>
-
         {filteredContacts.map((contact) => {
           return (
             <div key={contact.id}>

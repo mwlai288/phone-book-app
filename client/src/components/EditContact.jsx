@@ -54,12 +54,11 @@ class EditContact extends Component {
   };
 
   render() {
-    const id = this.props.match.params.id;
+    // const id = this.props.match.params.id;
     if (this.state.redirect) {
       return <Redirect to={`/allcontacts`} />;
     } else {
       return (
-        // Value's are not showing but will still save correct information. Don't need to fill out every form for Edit.
         <div>
           <form>
             <FormGroup controlId="formInlineName">
@@ -67,21 +66,21 @@ class EditContact extends Component {
               <FormControl
                 type="text"
                 name="firstname"
-                placeholder="First Name"
+                value={this.state.contacts.firstname}
                 onChange={this._handleChange}
               />
               <ControlLabel>Last Name:</ControlLabel>
               <FormControl
                 type="text"
                 name="lastname"
-                placeholder="Last Name"
+                placeholder={this.state.contacts.lastname}
                 onChange={this._handleChange}
               />
               <ControlLabel>Avatar:</ControlLabel>
               <FormControl
                 type="text"
                 name="avatar"
-                placeholder="Photo Url"
+                placeholder={this.state.contacts.avatar}
                 onChange={this._handleChange}
               />
 

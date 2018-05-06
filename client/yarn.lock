@@ -5632,6 +5632,10 @@ react-dom@^16.3.2:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react-drop-down@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-drop-down/-/react-drop-down-1.0.2.tgz#e0db4f77f0399bf1b224cb1a0446ab608fe366a1"
+
 react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
